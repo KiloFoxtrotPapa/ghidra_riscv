@@ -39,6 +39,7 @@
 @include "riscv.csr.sinc"
 @include "riscv.priv.sinc"
 @include "riscv.rvc.sinc"
+@include "riscv.rvv.sinc"
 @include "riscv.zi.sinc"
 
 

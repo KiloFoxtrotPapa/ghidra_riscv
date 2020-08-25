@@ -339,3 +339,19 @@ with csr: op3031=3 & op2829=3 {
 	: csr_F8 is csr_F8 & op2627=2 { export csr_F8; } # machine, standard read-only
 	: csr_FC is csr_FC & op2627=3 { export csr_FC; } # machine, custom read-only
 }
+
+
+
+vm: op2525 is op2525 { local tmp:1 = op2525; export tmp; }
+
+vs1: v1519 is v1519 { export v1519; } 
+vs2: v2024 is v2024 { export v2024; }
+vs3: v0711 is v0711 { export v0711; }
+vd:  v0711 is v0711 { export v0711; }
+
+simm5: sop1519 is sop1519 { local tmp:$(XLEN) = sop1519; export tmp; }
+# zimm: op1519 is op1519 { local tmp:$(XLEN) = op1519; export tmp; }
+
+nf: op2931 is op2931 { local tmp:$(XLEN) = op2931; export tmp; }
+
+vtypei: op2030 is op2030 { local tmp:$(XLEN) = op2030; export tmp; }
